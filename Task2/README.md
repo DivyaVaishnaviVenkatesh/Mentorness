@@ -1,63 +1,104 @@
-# Credit Card Approval Prediction 🚀
+# Salary Prediction of Data Professions
 
-Welcome to the **Credit Card Approval Prediction** project! This repository contains a machine learning approach to predict credit card approvals based on various features.
+## Introduction
 
-## Table of Contents
-- [Overview](#overview)
-- [Dataset](#dataset)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Model](#model)
-- [Results](#results)
-- [Contributing](#contributing)
+This repository contains a machine learning model for predicting salary/CTC (Cost to Company) of Data Professions based on various features. The dataset includes information about 
+1. `FIRST NAME`: First name
+2. `LAST NAME`: Last name
+3. `SEX`: Gender
+4. `DOJ`: Date of joining the company
+5. `CURRENT DATE`: Current date of data
+6. `DESIGNATION`: Job role/designation
+7. `AGE`: Age
+8. `SALARY`: Target variable, the salary of the data professional
+9.`UNIT`: Business unit or department
+10. `LEAVES USED`: Number of leaves used
+11. `LEAVES REMAINING`: Number of leaves remaining
+12. `RATINGS`: Ratings or performance ratings
+13. `PAST EXP`: Past work experience
+The project includes data preprocessing, exploratory data analysis, and training of multiple machine learning models to identify the best performing model.
 
-## Overview 📖
-This project aims to build a predictive model to determine whether a credit card application will be approved or not. The model is trained using historical data and various features that influence the approval decision.
+##  Problem Statement:
+Create a machine learning model which will help the company in determining the salary of Data Professions using the given data.
 
-## Dataset 📊
-The dataset used in this project includes features such as:
-- Applicant's Age
-- Income
-- Credit Score
-- Loan Amount
-- Employment Status
+## Features
 
-### Files:
-- `train_data.csv`: Training data with features and labels.
-- `test_data.csv`: Test data for model evaluation.
+- **Increased Accuracy**: AI/ML models extract complex patterns and trends not apparent with traditional methods, leading to more accurate predictions.
+- **Timely Predicting**: AI/ML models process large datasets quickly, enabling timely Salary Prediction for the newly hired employees.
+- **Scalability**: The models can handle large datasets, making them scalable for different regions and time periods.
+- **Cost-Effective**: The models require minimal physical infrastructure and can be implemented using cloud-based services.
 
-## Installation 🛠️
-To get started with the project, clone the repository and install the necessary dependencies.
 
-```bash
-git clone https://github.com/DivyaVaishnaviVenkatesh/Credit-Card-Approval-Prediction.git
-cd Credit-Card-Approval-Prediction
-pip install -r requirements.txt
-```
-## Usage 🚀
-Open the Jupyter Notebook and run the cells to train the model and make predictions.
 
-```bash
-jupyter notebook CreditCardApproval.ipynb
-```
+## Dataset
+You are given employee data (here)as well as various other features that can be responsible for determining the employee's salary, such as :
+1. `FIRST NAME`: First name
+2. `LAST NAME`: Last name
+3. `SEX`: Gender
+4. `DOJ`: Date of joining the company
+5. `CURRENT DATE`: Current date of data
+6. `DESIGNATION`: Job role/designation
+7. `AGE`: Age
+8. `SALARY`: Target variable, the salary of the data professional
+9.`UNIT`: Business unit or department
+10. `LEAVES USED`: Number of leaves used
+11. `LEAVES REMAINING`: Number of leaves remaining
+12. `RATINGS`: Ratings or performance ratings
+13. `PAST EXP`: Past work experience
 
-## Model 🧠
-The model is built using various machine learning algorithms such as:
+## Model Creation
 
-Logistic Regression
-Decision Trees
-Random Forest
-Support Vector Machines (SVM)
-The best-performing model is selected based on evaluation metrics like accuracy, precision, recall, and F1-score.
+1. **Data Cleaning and Preprocessing**:
+   - Handle missing values using random sample imputation.
+   - Visualize data for outliers and distributions.
+   - Encode target labels and normalize data.
+   - Plot correlation heatmap.
+   - Remove outliers and analyze data for the best fit line.
 
-## Results 📈
-The model's performance is evaluated on the test set, achieving an accuracy of XX%. Detailed results and visualizations can be found in the Jupyter Notebook.
+2. **Data Splitting**:
+   - Split data into training and testing sets using `sklearn`'s `train_test_split`.
 
-## Contributing 🤝
-Contributions are welcome! Please fork the repository and submit a pull request.
+3. **Model Training**:
+   - Select Random Forest Regresssor for its high R-Squared Value (0.6594).
+   - Evaluate model using R-Squared Error,Mean Squared Error.
 
-  Fork the repository
-  Create a new branch (git checkout -b feature-branch)
-  Commit your changes (git commit -m 'Add some feature')
-  Push to the branch (git push origin feature-branch)
-  Open a pull request
+4. **Model Saving and Deployment**:
+   - Save the model using `pickel`.
+   - Deploy the model using Flask on Render.
+
+
+## Deployment
+
+The model is deployed using Flask on Render.
+## Usage
+
+To use this project:
+
+1. **Install dependencies:**:
+   ```sh
+   pip install -r requirements.txt
+
+2. **Run the Flask app**:
+   ```sh
+   python app.py
+
+3. **Access the web app**:
+   ```sh
+   Open your web browser and go to http://localhost:5000
+
+
+## Screenshots
+
+### Index Page
+![SalaryOutput (2)](https://github.com/user-attachments/assets/ab4e1878-d600-4107-84a7-a546265141ae)
+
+
+![SalaryOutput0 (2)](https://github.com/user-attachments/assets/be2b73b9-db09-4ac7-b0dd-9a5f75fa854a)
+
+
+
+### Result Page
+![SalaryOutput1 (2)](https://github.com/user-attachments/assets/f7a47a9f-ee60-44ce-a79e-cf028b4a7192)
+
+
+
